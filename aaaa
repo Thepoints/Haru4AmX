@@ -1,0 +1,13 @@
+    while wait(.5) do
+        char = game:GetService('Players').LocalPlayer.Character
+        if char.Humanoid.Health < 2 then
+            wait()
+            char:FindFirstChild('RagdollConstraints'):Destroy()
+            char:FindFirstChild('BodyEffects').SpecialParts:Destroy()
+            char:FindFirstChild('Health').SpecialParts:Destroy()
+            char:FindFirstChild('Animate').SpecialParts:Destroy()
+            wait()
+            char.HumanoidRootPart.CFrame = CFrame.new(100,3000,100)
+        end
+    end
+ end)
